@@ -11,6 +11,8 @@ cd ${project}
 # get input
 curl -s "https://adventofcode.com/2015/day/${day}/input" --cookie "session=${AOC_SESSION}" -o input.txt
 
+# add readme
+touch README.md
 
 echo -n 'fn main() {
     let data = include_str!("../input.txt").trim();
