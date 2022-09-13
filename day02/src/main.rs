@@ -48,3 +48,32 @@ fn main() {
 
     println!("Part 2: {}", total_ribbon);
 }
+
+#[cfg(test)]
+mod tests {
+    use crate::Box;
+
+    #[test]
+    fn part_one_example_one() {
+        let b: Box = Box::new("2x3x4");
+        assert_eq!(b.surface_area(), 58);
+    }
+
+    #[test]
+    fn part_one_example_two() {
+        let b: Box = Box::new("1x1x10");
+        assert_eq!(b.surface_area(), 43);
+    }
+
+    #[test]
+    fn part_two_example_one() {
+        let b: Box = Box::new("2x3x4");
+        assert_eq!(b.ribbon_length(), 34);
+    }
+
+    #[test]
+    fn part_two_example_two() {
+        let b: Box = Box::new("1x1x10");
+        assert_eq!(b.ribbon_length(), 14);
+    }
+}
